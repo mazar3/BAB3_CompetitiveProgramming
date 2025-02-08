@@ -1,0 +1,5 @@
+Nombre de lignes 4
+Ceci est le premiere ligne
+Voici la deuxieme ligne
+Troisieme ligne
+Ligne numero quatre
