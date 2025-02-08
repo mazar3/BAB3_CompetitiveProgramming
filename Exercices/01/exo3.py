@@ -45,6 +45,6 @@ class Solution:
 
 
 instance = Instance()
-instance.readfile("exo3_2024_input.txt")
+instance.readfile("exo3_input.txt")
 solution = Solution(instance)
 solution.writesol("exo3_output.txt")
