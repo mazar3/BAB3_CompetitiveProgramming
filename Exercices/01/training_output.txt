@@ -1,0 +1,2 @@
+Luc : max=90 | min=72 | moyenne=82.33
+Emma : max=91 | min=68 | moyenne=79.00
