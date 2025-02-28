@@ -4,6 +4,10 @@ def somme_sous_sequence_max_divide_conquer(v, debut, fin):
     # on divise en deux moitiés
     milieu = (debut + fin) // 2
 
+    # cas 0 : si il n'y a plus qu'un élément
+    if debut == fin:
+            return v[debut], debut, fin
+
     # cas 1 : si la sous-séquence est entièrement à gauche
     gauche_somme, gauche_debut, gauche_fin = somme_sous_sequence_max_divide_conquer(v, debut, milieu)
 
@@ -45,7 +49,7 @@ def somme_sous_sequence_max_divide_conquer(v, debut, fin):
         return milieu_somme, gauche_index, droite_index
 
 
-# test avec le tableau de l'exercice brute force
+# test avec le vecteur de l'exercice brute force
 # sortie attendue : "DebutOPT: 7, FinOPT: 10, somme_max: 43"
 v_test = [13, -3, -25, 20, -3, -16, -23, 18, 20, -7, 12, -5, -22, 15, -4, 7]
 start_time = time.time()
@@ -54,9 +58,9 @@ print(f"> Petit tableau (test) :")
 print(f"   > Sous séquence de somme maximale trouvée :")
 print(f"      > Position : {debut_opt}->{fin_opt}")
 print(f"      > Somme : {somme_max}")
-print(f"      > Temps d'exécution : {time.time() - start_time:.4f} seconds")
+print(f"      > Temps d'exécution : {time.time() - start_time:.4f} secondes")
 
-# application au grand tableau dans "tres_long_vecteur.txt"
+# application au grand vecteur dans le fichier txt
 try:
     with open("tres_long_vecteur_pour_soussequencedesommemax.txt", "r") as f:
         v = list(map(int, f.readline().split()))
@@ -67,6 +71,6 @@ try:
     print(f"   > Sous séquence de somme maximale trouvée :")
     print(f"      > Position : {debut_opt}->{fin_opt}")
     print(f"      > Somme : {somme_max}")
-    print(f"      > Temps d'exécution : {time.time() - start_time:.4f} seconds")
+    print(f"      > Temps d'exécution : {time.time() - start_time:.4f} secondes")
 except FileNotFoundError:
     print("\nErreur : Le fichier txt n'a pas été trouvé")
