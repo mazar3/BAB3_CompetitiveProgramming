@@ -4,14 +4,10 @@ def somme_sous_sequence_max_divide_conquer(v, debut, fin):
     # on divise en deux moitiés
     milieu = (debut + fin) // 2
 
-    # cas 0 : s'il n'y a qu'un seul élément
-    if debut == fin:
-        return v[debut], debut, fin
-
-    # cas 1 : si la sous-séquence entièrement est à gauche
+    # cas 1 : si la sous-séquence est entièrement à gauche
     gauche_somme, gauche_debut, gauche_fin = somme_sous_sequence_max_divide_conquer(v, debut, milieu)
 
-    # cas 2 : si la sous-séquence est entièrement à droite
+    # cas 2 : si la sous-séquence entièrement est à droite
     droite_somme, droite_debut, droite_fin = somme_sous_sequence_max_divide_conquer(v, milieu + 1, fin)
 
     # cas 3 : si la sous-séquence passe par le milieu
