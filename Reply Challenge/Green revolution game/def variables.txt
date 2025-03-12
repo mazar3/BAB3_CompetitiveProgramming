@@ -1,0 +1,34 @@
+minimum de batiment alimentés : Tm
+maximum de batiment alimentés : Tx
+
+profit par batiment alimentés : Tr
+
+Budget de depart : D ( maj a chaque tour)
+
+nombre de batiments alimentés : n
+
+profit (si Tm est atteint) = min(n, Tx)* Tr
+
+si pas profit = 0
+
+possibilité d'acheter des ressources, prix d'achat sera soustrais au profit
+prix de maintenance aussi soustrait a chaque tour
+
+nombre de ressource dispo = R
+
+8 parametre pour definir les ressources  :
+
+RI  = type 
+RA  = prix d'activation    
+RP  = cout periodique
+RW  = nombre de tour consecutif avec bnef
+RM  = nombre de tour d'arret (maintenance)
+RL  = temps de vie
+RU  = nombre de bâtiments alimentable pour chaque tour par la ressource
+RT  = effet spéciaux
+
+premiere ligne : D R T
+
+les autres R lignes : RI RA RP RW RM RL RU RT RE
+
+les autres T lignes : Tmt Txt Trt, 
